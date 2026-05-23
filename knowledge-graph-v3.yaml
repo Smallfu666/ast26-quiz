@@ -368,6 +368,16 @@ concepts:
 
   # ==== System pillar =======================================================
 
+  - slug: btree-are-back
+    title: "B-Trees Are Back"
+    description: >
+      經過多年 LSM-Tree 在 write-heavy workload 的主導，近年的研究重新檢視了 B+Tree 在現代硬體上的潛力。在 NVMe SSD、大容量 DRAM、與多核 CPU 的環境下，B+Tree 的隨機存取代價變得可以接受，而它在 read amplification、range query 與 space amplification 上的優勢愈發明顯。本單元會從 in-memory ordered index（如 Wormhole）的設計談起，看看現代 B+Tree 變體如何結合 hash trie、SIMD、cache-line aware layout 等技術逼近 hash table 的查詢速度，同時保留 range scan 的能力；並透過 2025 年 "B-Trees Are Back" 的綜述，理解為什麼許多 storage engine 又重新把 B+Tree 拉回設計選擇的中心。
+    tier: advanced
+    open: false
+    pillar: system
+    depends_on: []
+    papers: [b-trees-are-back]
+
   - slug: buffer-pool
     title: "Buffer Pool"
     description: >
