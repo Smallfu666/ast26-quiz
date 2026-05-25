@@ -11,7 +11,7 @@ options:
       因為每個壓縮區塊的輸出固定為 4 KiB，代表其對應的未壓縮資料也必然是固定的 4 KiB，因此可以直接進行就地解壓。
     explanation: |
       這是對 Fixed-sized output 的典型誤解。Fixed-sized output 的意思是
-      「compressed output / encoded block size 固定」— EROFS 接受
+       「compressed output / encoded block size 固定」；EROFS 接受
       variable-sized 的原始資料，將其壓縮成 fixed-sized 的 compressed block。
       不同資料區段的壓縮率不同，同一個 4 KiB compressed block 解壓後的原始
       資料量是變動的（例如 8 KiB 或 16 KiB），並非固定為 4 KiB。
